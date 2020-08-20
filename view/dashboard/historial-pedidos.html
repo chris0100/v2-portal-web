@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Historial de Pedidos</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../css/mdb.css">
+    <!-- DataTables.net  -->
+    <link rel="stylesheet" type="text/css" href="../../css/addons/datatables.min.css">
+    <link rel="stylesheet" href="../../css/addons/datatables-select.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Asap+Condensed:500">
+
+</head>
+
+<body class="fixed-sn white-skin" style="background: rgba(255,255,255,0.72);  /* fallback for old browsers */
+background: linear-gradient(to bottom right, #ffffff, white ,rgba(117,186,244,0.6)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+min-height: 78.5vh">
+
+
+<!-- Grid column -->
+<div class="col-12 my-3">
+
+    <!-- Navbar  navbar navbar-expand-lg navbar-dark primary-color -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="z-index: 3">
+
+
+        <a href="../../index.html" style="margin-left: 80px">
+            <img alt="Logo" src="../../img/logos/logo-eka.png" class="img-fluid" style="max-width: 100px"/>
+        </a>
+
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#basicExampleNav12"
+                aria-controls="basicExampleNav12" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav12">
+
+
+            <!-- Navbar links -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown mr-2">
+                    <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> HERMECO | HERMECO COMPANY
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="../login/login.html">Cerrar Sesión</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link waves-effect"><i class="fas fa-question-circle"></i> Ayuda</a>
+                </li>
+
+                <li class="nav-item mr-5">
+                    <a class="nav-link waves-effect" href="configuracion-usuario.html"><i class="fas fa-cog"></i> Configuración</a>
+                </li>
+
+
+            </ul>
+            <!-- Navbar links -->
+
+        </div>
+
+    </nav>
+    <!-- Navbar -->
+
+
+
+
+
+
+
+    <!--Navbar secundaria-->
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color-dark fixed-top" style="margin-top: 70px; z-index: 1">
+
+        <div class="container">
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Panel
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista-usuarios.html">Lista de Usuarios</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown multi-level-dropdown active">
+                        <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Gestión de Pedidos</a>
+                        <ul class="dropdown-menu mt-2 rounded-0 primary-color-dark border-0 z-depth-1">
+
+                            <li class="dropdown-item dropdown-submenu p-0">
+                                <a href="crear-pedido.html" class="text-white w-100">Crear Nuevo Pedido</a>
+                            </li>
+
+                            <li class="dropdown-item dropdown-submenu p-0">
+                                <a href="lista-pedidos-borrador.html" class="text-white w-100">Pedidos en Borrador</a>
+                            </li>
+
+                            <li class="dropdown-item dropdown-submenu p-0">
+                                <a href="historial-pedidos.html" class="text-white w-100">Historial de Pedidos</a>
+                            </li>
+
+                            <li class="dropdown-item dropdown-submenu p-0">
+                                <a href="lista-pedidos-verificacion.html" class="text-white w-100">Pedidos en Verificación</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- CARD DE CONTENIDO SEGUN PAGINA-->
+    <div class="card mx-auto" style="width: 90%; margin-top: 200px">
+
+        <div class="card-header warning-color-dark">
+            <h5 class="font-weight-bold text-black">Historial de Pedidos</h5>
+        </div>
+
+
+        <div class="d-flex pt-5 pl-5">
+            <div class="md-form mr-5">
+                <input placeholder=" " type="text" id="date-picker-example" class="form-control datepicker">
+                <label for="date-picker-example">Fecha Inicio</label>
+            </div>
+
+            <div class="md-form mr-5">
+                <input placeholder=" " type="text" id="date-picker-example2" class="form-control datepicker">
+                <label for="date-picker-example2">Fecha Final</label>
+            </div>
+
+
+            <div>
+                <button class="btn btn-primary btn-rounded"><i class="fas fa-search"></i> Consultar</button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Tab panels -->
+
+        <div class="card-body">
+
+                <!-- Gird column -->
+                <div class="col-md-12">
+
+
+                    <hr>
+
+
+                    <h5 class="font-weight-bold my-4">Total Pedidos: 0</h5>
+
+
+
+                    <table id="dt-filter-search" class="table table-striped table-hover table-responsive" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th class="th-sm">Numero Documento
+                            </th>
+                            <th class="th-sm">Razon Social
+                            </th>
+                            <th class="th-sm">Estado
+                            </th>
+                            <th class="th-sm">Notas
+                            </th>
+                            <th class="th-sm">Orden de Compra
+                            </th>
+                            <th class="th-sm">Valor Bruto Pedido
+                            </th>
+                            <th class="th-sm">Valor Impuestos Pedido
+                            </th>
+                            <th class="th-sm">Valor Neto Pedido
+                            </th>
+                            <th class="th-sm">Punto de Envio
+                            </th>
+                            <th class="th-sm">Descripción Punto Envio
+                            </th>
+                            <th class="th-sm">Dirección de Envio
+                            </th>
+                            <th class="th-sm">Fecha de Creación
+                            </th>
+                            <th class="th-sm">Fecha Entrega
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+
+                        <tfoot>
+                        <tr>
+                            <th>Numero Documento
+                            </th>
+                            <th>Razon Social
+                            </th>
+                            <th>Estado
+                            </th>
+                            <th>Notas
+                            </th>
+                            <th>Orden de Compra
+                            </th>
+                            <th>Valor Bruto Pedido
+                            </th>
+                            <th>Valor Impuestos Pedido
+                            </th>
+                            <th>Valor Neto Pedido
+                            </th>
+                            <th>Punto de Envio
+                            </th>
+                            <th>Descripción Punto Envio
+                            </th>
+                            <th>Dirección de Envio
+                            </th>
+                            <th>Fecha de Creación
+                            </th>
+                            <th>Fecha Entrega
+                            </th>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../js/mdb.min.js"></script>
+    <!-- DataTables  -->
+    <script type="text/javascript" src="../../js/addons/datatables.min.js"></script>
+    <!-- DataTables Select  -->
+    <script type="text/javascript" src="../../js/addons/datatables-select.min.js"></script>
+
+    <!-- Initializations -->
+    <script>
+
+        //Manejo de tablas
+        $(document).ready(function () {
+            $('#dt-filter-search').dataTable({
+
+                initComplete: function () {
+                    this.api().columns().every( function () {
+                        var column = this;
+                        var search = $(`<input class="form-control form-control-sm" type="text" placeholder="Search">`)
+                            .appendTo( $(column.footer()).empty() )
+                            .on( 'change input', function () {
+                                var val = $(this).val()
+
+                                column
+                                    .search( val ? val : '', true, false )
+                                    .draw();
+                            } );
+
+                    } );
+                }
+            });
+        });
+
+        // Data Picker Initialization
+        $('.datepicker').pickadate();
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

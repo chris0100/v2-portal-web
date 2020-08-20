@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Iniciar Sesión</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../css/mdb.css">
+    <!-- Animations -->
+    <link rel="stylesheet" href="../../css/modules/animations-extended.css">
+    <!-- Your custom styles (optional) -->
+    <style>
+
+    </style>
+</head>
+
+<body style="overflow-x: hidden">
+
+
+<div class="row" style="height: 100vh">
+
+    <div class="col-sm-4 sn-bg-4" style="border-right: 5px solid #025f97">
+
+        <div class="text-center mt-2">
+            <a href="#" class="pl-0"><img src="../../img/logos/logo-eka.png"></a>
+        </div>
+
+    </div>
+
+
+    <div class="col-sm-8 d-flex align-items-center"
+         style="background: url(../../img/demo8/bg-29.jpg); background-position: center; background-size: cover">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mb-4 mx-auto">
+
+
+            <!-- Modal: Login & Register tabs -->
+            <div class="modal-dialog cascading-modal" role="document">
+                <!-- Content -->
+                <div class="modal-content">
+
+                    <!-- Modal cascading tabs -->
+                    <div class="modal-c-tabs">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav md-tabs tabs-2 light-blue darken-3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">
+                                    Cliente</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">
+                                    Proveedor</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panels -->
+                        <div class="tab-content">
+
+                            <!-- Panel 1 -->
+                            <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+
+                                <!-- Body -->
+                                <div class="modal-body mb-1">
+
+                                    <div class="text-center">
+                                        <h4 class="font-weight-bold dark-grey-text"><i class="fas fa-users p-2 fa-1x"></i> Portal Web</h4>
+                                    </div>
+
+
+
+                                    <div class="md-form md-outline font-weight-bold">
+                                        <input type="text" id="nit-cliente" class="form-control">
+                                        <label for="nit-cliente">Nit Cliente</label>
+                                    </div>
+
+
+                                    <div class="row" style="margin-top: -20px">
+                                        <div class="col-md-12 select-outline">
+
+                                            <select class="mdb-select md-form md-outline colorful-select dropdown-primary">
+                                                <option value="" disabled selected>Seleccionar</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                            </select>
+                                            <label>Sucursal</label>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row" style="margin-top: -20px">
+                                        <div class="col-md-12 select-outline">
+
+                                            <select class="mdb-select md-form md-outline colorful-select dropdown-primary">
+                                                <option value="" disabled selected class="font-weight-bold">Seleccionar</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                            </select>
+                                            <label>Punto de envío</label>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="md-form md-outline font-weight-bold" style="margin-top: 0px">
+                                        <input type="password" id="password" class="form-control ">
+                                        <label for="password">Contraseña</label>
+                                    </div>
+
+
+
+                                    <div class="text-center mt-2">
+                                        <button class="btn btn-primary btn-rounded" onclick="window.location.href='../../index.html'">Ingresar <i class="fas fa-sign-in-alt ml-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <!-- Footer -->
+                                <div class="modal-footer display-footer">
+                                    <div class="options text-center text-md-right mt-1">
+                                        <p>¿Necesitas <a href="#" class="blue-text">Ayuda?</a></p>
+                                        <p>¿Contraseña <a href="#" class="blue-text">Olvidada?</a></p>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <!-- Panel 1 -->
+
+
+
+
+
+
+
+                            <!--Panel 2-->
+                            <div class="tab-pane fade" id="panel2" role="tabpanel">
+
+                                <!-- Body -->
+                                <div class="modal-body">
+
+                                    <div class="text-center">
+                                        <h4 class="font-weight-bold dark-grey-text"><i class="fas fa-users p-2 fa-1x"></i> Portal Web</h4>
+                                    </div>
+
+
+                                    <div class="md-form md-outline font-weight-bold">
+                                        <input type="text" id="nit-proveedor" class="form-control">
+                                        <label for="nit-proveedor">Nit Proveedor</label>
+                                    </div>
+
+                                    <div class="md-form md-outline font-weight-bold">
+                                        <input type="password" id="password-proveedor" class="form-control">
+                                        <label for="password-proveedor">Contraseña</label>
+                                    </div>
+
+                                    <div class="text-center form-sm mt-2">
+                                        <button class="btn btn-primary btn-rounded" onclick="window.location.href='../../index.html'"
+                                        >Ingresar <i class="fas fa-sign-in-alt ml-1"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <!-- Footer -->
+                                <div class="modal-footer display-footer">
+                                    <div class="options text-center text-md-right mt-1">
+                                        <p>¿Necesitas <a href="#" class="blue-text">Ayuda?</a></p>
+                                        <p>¿Contraseña <a href="#" class="blue-text">Olvidada?</a></p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- Panel 2 -->
+
+                        </div>
+
+                    </div>
+
+                    <small class="font-weight-bold text-center">Copyright &copy; 2020 Eka Corporación S.A.</small>
+                    <a href="#" class="text-center"><small class="font-weight-bold">Términos y Condiciones</small></a>
+
+                </div>
+                <!-- Content -->
+
+
+            </div>
+            <!-- Modal: Login & Register tabs -->
+
+
+        </div>
+        <!-- Grid column -->
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../../js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../../js/bootstrap.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../../js/mdb.min.js"></script>
+
+<!--Custom scripts-->
+<script>
+
+    $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+        $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+            $(this).closest('.select-outline').find('label').toggleClass('active');
+            $(this).closest('.select-outline').find('.caret').toggleClass('active');
+        });
+    });
+
+
+
+
+    $(document).ready(function () {
+
+        var height = $(window).height();
+
+        $('#cuerpo').height(height);
+    });
+
+</script>
+
+</body>
+
+</html>
